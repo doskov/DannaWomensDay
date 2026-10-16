@@ -21,8 +21,8 @@
             --glass-bg: rgba(17, 17, 17, 0.8);
             --glass-border: rgba(0, 38, 255, 0.4);
             
-            /* Variável para o nome - MUDE AQUI! */
-            --girlfriend-name: "Danna(Cheri)"; /* ← COLOQUE O NOME AQUI */
+            
+            --girlfriend-name: "Danna(Cheri)";
         }
 
         * {
@@ -40,7 +40,7 @@
             cursor: none;
         }
 
-        /* Cursor personalizado dark */
+    
         .custom-cursor {
             position: fixed;
             width: 20px;
@@ -64,7 +64,7 @@
             z-index: 9998;
         }
 
-        /* Partículas vermelhas */
+      
         .particles {
             position: fixed;
             top: 0;
@@ -91,7 +91,7 @@
             100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
         }
 
-        /* Efeito de ondas dark */
+     
         .wave-bg {
             position: fixed;
             top: 0;
@@ -111,7 +111,7 @@
             50% { transform: scale(1.2) rotate(3deg); }
         }
 
-        /* Container principal */
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -120,7 +120,7 @@
             z-index: 10;
         }
 
-        /* Header dark theme */
+
         .header {
             text-align: center;
             margin-bottom: 60px;
@@ -183,12 +183,12 @@
             50% { opacity: 1; transform: scale(1.05); }
         }
 
-        /* Nome da namorada */
+
         .girlfriend-name::before {
             content: var(--girlfriend-name);
         }
 
-        /* Card principal dark theme melhorado */
+
         .love-card {
             background: linear-gradient(135deg, 
                 rgba(17, 17, 17, 0.95) 0%, 
@@ -326,7 +326,7 @@
             50% { box-shadow: 0 15px 35px hsl(207, 100%, 50%), 0 0 20px var(--gold); }
         }
 
-        /* Galeria de fotos - 3 por linha mobile-first */
+        
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -416,7 +416,7 @@
             transform: scale(1.02);
         }
 
-        /* Texto de fallback melhorado */
+     
         .photo-frame[data-fallback] {
             display: flex;
             flex-direction: column;
@@ -438,7 +438,7 @@
             opacity: 0.8;
         }
 
-        /* Mensagem especial dark theme */
+      
         .special-message {
             background: var(--glass-bg);
             backdrop-filter: blur(25px);
@@ -506,7 +506,7 @@
             font-weight: 300;
         }
 
-        /* Footer dark theme */
+   
         .footer {
             text-align: center;
             padding: 60px 0;
@@ -572,7 +572,7 @@
             }
         }
 
-        /* Loading dark theme */
+    
         .loading-overlay {
             position: fixed;
             top: 0;
@@ -603,7 +603,7 @@
             to { opacity: 0; visibility: hidden; }
         }
 
-        /* Responsivo melhorado - Mobile First */
+       
         @media (max-width: 480px) {
             .header h1 { 
                 font-size: 2.8rem; 
@@ -693,7 +693,7 @@
             }
         }
 
-        /* Animações de entrada */
+       
         @keyframes slideDown {
             from { opacity: 0; transform: translateY(-50px); }
             to { opacity: 1; transform: translateY(0); }
@@ -706,18 +706,18 @@
     </style>
 </head>
 <body>
-    <!-- Overlay de loading -->
+  
     <div class="loading-overlay">
         <div class="loading-heart">❤️</div>
     </div>
 
-    <!-- Cursor personalizado -->
+   
     <div class="custom-cursor"></div>
 
-    <!-- Partículas de fundo -->
+   
     <div class="particles"></div>
     
-    <!-- Efeito de ondas -->
+   
     <div class="wave-bg"></div>
 
     <div class="container">
@@ -775,14 +775,14 @@
     </div>
 
     <script>
-        // Cursor personalizado
+        
         let cursor = document.querySelector('.custom-cursor');
         
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX - 10 + 'px';
             cursor.style.top = e.clientY - 10 + 'px';
             
-            // Criar trilha do cursor
+            
             if (Math.random() > 0.8) {
                 let trail = document.createElement('div');
                 trail.className = 'cursor-trail';
@@ -794,7 +794,7 @@
             }
         });
 
-        // Partículas vermelhas
+        
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -814,26 +814,26 @@
             setTimeout(() => particle.remove(), 10000);
         }
 
-        // Criar partículas continuamente
+        
         setInterval(createParticle, 300);
 
-        // Função principal da surpresa
+        
         function showSurprise() {
             const message = document.getElementById('specialMessage');
             message.classList.add('show');
             
-            // Explosão de corações vermelhos
+            
             createHeartExplosion();
             
-            // NOVA FUNÇÃO: Animação épica "TE AMO"
+            
             createTeAmoAnimation();
             
-            // Vibração
+            
             if (navigator.vibrate) {
                 navigator.vibrate([200, 100, 200, 100, 300]);
             }
             
-            // Mudança temporária da cor de fundo
+            
             document.body.style.background = 'linear-gradient(135deg, #ff0040, #990026, #000000, #ff1744)';
             document.body.style.backgroundSize = '400% 400%';
             document.body.style.animation = 'gradient-shift 2s ease infinite';
@@ -843,15 +843,15 @@
                 document.body.style.animation = '';
             }, 4000);
             
-            // Criar mais partículas especiais
+            
             for (let i = 0; i < 50; i++) {
                 setTimeout(() => createParticle(), i * 50);
             }
         }
 
-        // NOVA FUNÇÃO: Animação épica "TE AMO"
+        
         function createTeAmoAnimation() {
-            // Criar múltiplas animações "TE AMO"
+            
             const teAmoTexts = [
                 'EU TE AMO ❤️',
                 '💖 EU TE AMO MUITO 💖',
@@ -863,7 +863,7 @@
                 '🥰 EU TE AMO DEMAIS 🥰'
             ];
             
-            // Animação central principal
+           
             const mainTeAmo = document.createElement('div');
             mainTeAmo.innerHTML = 'EU TE AMO ❤️';
             mainTeAmo.style.cssText = `
@@ -887,7 +887,7 @@
             document.body.appendChild(mainTeAmo);
             setTimeout(() => mainTeAmo.remove(), 4000);
 
-            // Múltiplos "TE AMO" flutuantes
+            
             for (let i = 0; i < 8; i++) {
                 setTimeout(() => {
                     const teAmo = document.createElement('div');
@@ -915,7 +915,7 @@
                 }, i * 200);
             }
 
-            // Chuva de "TE AMO" pequenos
+            
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
                     const miniTeAmo = document.createElement('div');
@@ -936,7 +936,7 @@
                 }, i * 150);
             }
 
-            // Efeito de pulso na tela
+            
             const pulseOverlay = document.createElement('div');
             pulseOverlay.style.cssText = `
                 position: fixed;
@@ -953,7 +953,7 @@
             setTimeout(() => pulseOverlay.remove(), 2000);
         }
 
-        // Explosão de corações vermelhos
+       
         function createHeartExplosion() {
             const hearts = ['❤️', '💖', '💕', '💗', '💓', '💝', '♥️', '💘'];
             
@@ -972,7 +972,7 @@
             }
         }
 
-        // Easter egg: triplo clique
+        
         let clickCount = 0;
         let clickTimer;
         
@@ -981,11 +981,11 @@
             clearTimeout(clickTimer);
             
             if (clickCount === 3) {
-                // Ativação do modo ultra dark
+                
                 document.body.style.filter = 'hue-rotate(30deg) saturate(1.8) brightness(1.2)';
                 createHeartExplosion();
                 
-                // Criar texto flutuante
+                
                 const text = document.createElement('div');
                 text.innerHTML = '🔥 MODO DARK ULTRA ATIVADO! 🔥';
                 text.style.cssText = `
@@ -1018,7 +1018,7 @@
                 }, 1000);
             }
             
-            // Efeito de clique vermelho
+          
             const ripple = document.createElement('div');
             ripple.style.cssText = `
                 position: fixed;
@@ -1037,7 +1037,7 @@
             setTimeout(() => ripple.remove(), 800);
         });
 
-        // Efeito parallax 3D no mouse
+     
         document.addEventListener('mousemove', (e) => {
             const cards = document.querySelectorAll('.love-card, .photo-frame');
             const mouseX = e.clientX / window.innerWidth;
@@ -1052,14 +1052,14 @@
             });
         });
 
-        // Efeito de scroll suave
+        
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const rate = scrolled * -0.3;
             
             document.querySelector('.wave-bg').style.transform = `translateY(${rate}px) scale(1.1)`;
             
-            // Parallax das partículas
+          
             const particles = document.querySelectorAll('.particle');
             particles.forEach((particle, index) => {
                 const speed = (index % 3 + 1) * 0.1;
@@ -1067,7 +1067,7 @@
             });
         });
 
-        // Sistema de notificações românticas dark
+      
         const romanticMessages = [
             "💖 Você é meu mundo inteiro!",
             "🌹 Cada dia com você é especial!",
@@ -1104,10 +1104,10 @@
             setTimeout(() => notification.remove(), 4000);
         }
 
-        // Mostrar notificações aleatórias
+        
         setInterval(showNotification, 18000);
 
-        // Sistema de música ambiente visual (dark theme)
+     
         function createSoundWave() {
             const wave = document.createElement('div');
             wave.style.cssText = `
@@ -1145,10 +1145,10 @@
             return container;
         }
 
-        // Ativar visualizador de som
+        
         setInterval(createSoundWave, 150);
 
-        // Sistema de conquistas (easter eggs)
+       
         let achievements = {
             firstClick: false,
             tripleClick: false,
@@ -1156,7 +1156,7 @@
             allPhotosHovered: false
         };
 
-        // Detectar hover longo
+        
         let hoverTimer;
         document.querySelector('.love-card').addEventListener('mouseenter', () => {
             hoverTimer = setTimeout(() => {
@@ -1171,7 +1171,7 @@
             clearTimeout(hoverTimer);
         });
 
-        // Detectar todas as fotos visitadas
+        
         let hoveredPhotos = new Set();
         document.querySelectorAll('.photo-frame').forEach((frame, index) => {
             frame.addEventListener('mouseenter', () => {
@@ -1210,7 +1210,7 @@
             setTimeout(() => achievement.remove(), 3000);
         }
 
-        // Observador de interseção para animações
+        
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1224,21 +1224,21 @@
             });
         }, observerOptions);
 
-        // Inicialização quando a página carrega
+        
         document.addEventListener('DOMContentLoaded', () => {
-            // Observar elementos para animação
+           
             const elements = document.querySelectorAll('.photo-frame, .special-message');
             elements.forEach(el => observer.observe(el));
             
-            // Criar partículas iniciais
+            
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => createParticle(), i * 300);
             }
             
-            // Primeira notificação
+           
             setTimeout(showNotification, 5000);
             
-            // Efeito de entrada suave
+            
             document.body.style.opacity = '0';
             setTimeout(() => {
                 document.body.style.transition = 'opacity 1s ease';
@@ -1246,7 +1246,7 @@
             }, 100);
         });
 
-        // Adicionar CSS para animações extras
+        
         const extraStyles = document.createElement('style');
         extraStyles.textContent = `
             @keyframes ultra-text {
